@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('') {
+    stage('Deploy') {
       steps {
-        mail(subject: 'Build Info', body: 'Build Pipeline executed successfully', to: 'tf.vishvaspandya@gmail.com')
+        bat 'mvn package'
       }
     }
 
